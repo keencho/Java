@@ -11,5 +11,9 @@ public class ArrayList {
         }
 
         test.stream().forEach(e -> System.out.println(e));
+
+        test.stream().filter(e -> !e.equals("index: 1"));
+
+        test.stream().forEach(e -> System.out.println(e));
     }
 }
