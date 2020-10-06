@@ -21,6 +21,9 @@ public class StreamTest {
                 .forEach(e -> System.out.println(e));
 
         printLine();
+
+        System.out.println(test.stream().anyMatch(e -> e.equals("this")));
+        System.out.println(test.stream().anyMatch(e -> e.equals("thi")));
     }
 
     private static List<String> returnStringList() {
