@@ -3,6 +3,7 @@ package com.java.stream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ForkJoinPool;
 import java.util.stream.Collectors;
 
 public class StreamTest {
@@ -24,6 +25,9 @@ public class StreamTest {
 
         System.out.println(test.stream().anyMatch(e -> e.equals("this")));
         System.out.println(test.stream().anyMatch(e -> e.equals("thi")));
+
+        // ForkJoinPool framework
+        ForkJoinPool fjp = new ForkJoinPool(10);
     }
 
     private static List<String> returnStringList() {
