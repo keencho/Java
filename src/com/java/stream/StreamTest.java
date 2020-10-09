@@ -11,8 +11,6 @@ public class StreamTest {
     public static void main(String[] args) {
         List<String> test = returnStringList();
 
-        test.stream().forEach(e -> System.out.println(e));
-
         printLine();
 
         test.stream()
