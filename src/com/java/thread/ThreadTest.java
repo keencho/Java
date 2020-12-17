@@ -7,7 +7,7 @@ public class ThreadTest {
     public static void main(String[] args) {
         ForkJoinPool t = new ForkJoinPool(10);
         t.execute(() -> test());
-        System.out.println("today is rest day");
+        System.out.println("today is rest day 2");
     }
 
     private static void test() {
