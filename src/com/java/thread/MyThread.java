@@ -16,8 +16,7 @@ class Main {
         Runnable myThread = new MyThread();
 
         Thread t1 = new Thread(myThread);
-
-        t1.start();
+        
         // t1.start(); IllegalThreadStateException - 한번 종료된 쓰레드는 재시작 불가. 만약 하고자 한다면 새로운 쓰레드를 생성해야함
     }
 }
