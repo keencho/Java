@@ -16,8 +16,7 @@ public class StreamTest {
         test.stream()
                 .filter(e -> !e.equals("test"))
                 .collect(Collectors.toList())
-                .stream()
-                .forEach(e -> System.out.println(e));
+                .forEach(System.out::println);
 
         printLine();
 
