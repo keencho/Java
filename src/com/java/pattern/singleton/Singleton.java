@@ -1,23 +1,14 @@
 package com.java.pattern.singleton;
 
 public class Singleton {
-    private static Singleton instance;
-    public String value;
 
-    private Singleton(String value) {
-        // The following code emulates slow initialization.
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException ex) {
-            ex.printStackTrace();
-        }
-        this.value = value;
+    private static class LazyHolder {
+        private static final Singleton INSTANCE = new Singleton();
     }
 
-    public static Singleton getInstance(String value) {
-        if (instance == null) {
-            instance = new Singleton(value);
-        }
-        return instance;
+    private Singleton() { }
+
+    public static Singleton getInstance() {
+        return LazyHolder.INSTANCE;
     }
 }
