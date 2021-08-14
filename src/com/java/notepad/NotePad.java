@@ -10,9 +10,7 @@ import java.util.stream.Collectors;
 public class NotePad {
 
     public static void main(String[] args) {
-        LocalDate tt = LocalDate.now();
 
-        tt.isLeapYear();
     }
 
     public static class Test2 {
