@@ -10,7 +10,9 @@ import java.util.stream.Collectors;
 public class NotePad {
 
     public static void main(String[] args) {
+        LocalDate ld = LocalDate.now();
 
+        System.out.println(ld);
     }
 
     public static class Test2 {
