@@ -1,12 +1,17 @@
 package sycho.java.notepad;
 
 import java.time.LocalDate;
+import java.util.regex.Pattern;
 
 public class NotePad {
 
     public static void main(String[] args) {
-        LocalDate ld = LocalDate.now();
+        Pattern tellPattern = Pattern.compile( "^(01\\d{1}|02|0505|0502|0506|0\\d{1,2})-?(\\d{3,4})-?(\\d{4})");
 
-        System.out.println(ld);
+        String phoneNumber = "001034578021";
+
+        if (!tellPattern.matcher(phoneNumber).matches()) {
+            System.out.println("성공");
+        }
     }
 }
