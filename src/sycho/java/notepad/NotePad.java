@@ -1,17 +1,19 @@
 package sycho.java.notepad;
 
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.regex.Pattern;
 
 public class NotePad {
 
     public static void main(String[] args) {
-        Pattern tellPattern = Pattern.compile( "^(01\\d{1}|02|0505|0502|0506|0\\d{1,2})-?(\\d{3,4})-?(\\d{4})");
+        Date t = new Date();
 
-        String phoneNumber = "001034578021";
+        System.out.println();
 
-        if (!tellPattern.matcher(phoneNumber).matches()) {
-            System.out.println("성공");
-        }
     }
 }
